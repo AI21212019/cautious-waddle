@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "tauri dev",
+    "dev:web": "vite",
+    "tauri": "tauri",
+    "build": "tauri build",
+    "build:web": "vite build",
+    "test": "cargo test --manifest-path ./src-tauri/Cargo.toml",
+    "format": "prettier --write --plugin-search-dir=. src *.js && eslint --fix src *.js",
+    "check": "cargo check --manifest-path src-tauri/Cargo.toml && eslint src *.js && svelte-check"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "1.0.0-next.37",
+    "@tauri-apps/api": "1.0.0-rc.0",
+    "@tauri-apps/cli": "1.0.0-rc.2",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.4.0",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.6.0",
+    "sass": "^1.49.7",
+    "svelte": "^3.46.4",
+    "svelte-check": "^2.4.3",
+    "svelte-preprocess": "^4.10.3",
+    "typescript": "^4.5.5",
+    "vite": "^2.8.1"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true
+  }
+}
